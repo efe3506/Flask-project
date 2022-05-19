@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap link end -->
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link end -->
+    <title>Flask App</title>
+</head>
+<body>
+
+    <!-- main container -->
+    <main class="animated-background d-flex justify-content-center align-items-center flex-column">
+
+        <figure class="text-center mx-3">
+            <blockquote class="blockquote">
+              <p class="display-5 text-uppercase">ıntegratıve regulatory cırcuıt fınder</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <p class="h5">A tool for integrating analysis of mRNA and miRNA expression data to infer regulatory circuits</p> 
+            </figcaption>
+          </figure>
+        
+        <!-- <h1 class="display-5 text-uppercase mx-3 mb-4 text-center">ıntegratıve regulatory cırcuıt fınder</h1>
+        <h3 class="h3 text-center mx-5 mb-4">A tool for integrating analysis of mRNA and miRNA expression data to infer regulatory circuits</h3> -->
+
+        <div class="container-fluid w-50">
+            <div class="row st">
+                <div class="col-md-12 inner-card form-container">
+                    <form method="POST" action="{{ url_for("upload_file")}}" enctype="multipart/form-data" class="container d-grid justify-content-center">
+
+                        <div class="tf">
+                        <label for="tf">TF File:</label>
+                        <input type="file" name="file1" id="tf" class="form-control">
+                        </div>
+                        
+                        <div class="mirna">
+                        <label for="mirna">miRNA File:</label>
+                        <input type="file" name="file2" id="mirna" class="form-control">
+                        </div>
+                        
+        
+        
+                        <input class="btn btn-outline-dark mb-3" type="submit" value="Submit">
+        
+                    </form>
+                </div>
+            </div>
+
+            <div class="row nd">
+
+                <div class="col-md-12 inner-card my-2 p-2 d-grid text-center">
+
+                    <div class="nd-1">
+                        <a href="{{ url_for('downloads', filename='out_1.csv') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="this is a dummy text" data-bs-trigger="hover focus"> See TF File </a>
+
+                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="this is a dummy text" data-bs-trigger="hover focus"> Dif. Exp. for TF </a>
+                    </div>
+                    
+                    <div class="nd-2">
+                        <a href="{{ url_for('downloads', filename='out_2.csv') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="this is a dummy text" data-bs-trigger="hover focus"> See miRNA File </a>
+
+                        <a href="/download2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="this is a dummy text" data-bs-trigger="hover focus"> Download Dif. Exp. for miRNA</a>
+                    </div>
+                    
+                    <div class="nd-3">
+                        <a href="{{ url_for('downloads', filename='circuits.txt') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="this is a dummy text" data-bs-trigger="hover focus"> See Circuit 
+                        </a>
+                    </div>
+                    
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </main>
+    <!-- main container end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

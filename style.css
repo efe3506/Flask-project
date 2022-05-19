@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0ECE3;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.animated-background{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        to right, #F0ECE3,
+        #92A9BD, #7C99AC);
+        background-size: 400% 400%;
+        animation: animated-background 1s infinite ease-in-out;
+}
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.inner-card{
+    background-color: 
+    rgba(255, 255, 255, .05);
+    box-shadow: 0 0 10px 
+    rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+}
+
+/* select file */
+
+.tf, .mirna{
+    padding: 1rem;
+    font-weight: 600;
+}
+
+#tf button, #mirna button{
+    border: none;
+    outline: none;
+    /* background-color: #92A9BD; */
+}
+
+.nd div{
+    margin: 8px 0;
+}
+
+.nd div a{
+    margin: 2px 0;
+}
+
+.nd-1, .nd-2, .nd-3{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* select file end */

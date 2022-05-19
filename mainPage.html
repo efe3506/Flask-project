@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+    <title>Python Flask App</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+    <style>
+        .container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10%;
+            margin-top: 10%;
+            width: 40%;
+
+        }
+        .header {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+        .body {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+    </style>
+</head >
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <form method="POST" action="{{ url_for("upload_file")}}" enctype="multipart/form-data">
+                <p>TF File: <input type="file" name="file1"></p>
+
+                <p>miRNA File: <input type="file" name="file2"></p>
+
+
+                <p><input type="submit" value="Submit"></p>
+
+            </form>
+        </div>
+
+
+        <div class="header">
+            <a href="{{ url_for('downloads', filename='out_1.csv') }}"> See TF File </a>
+            <a href="{{ url_for('download_file') }}"> Dif. Exp. for TF </a>
+        </div>
+
+
+
+        <div class="header">
+            <a href="{{ url_for('downloads', filename='out_2.csv') }}"> See miRNA File </a>
+            <a href="/download2"> Download Dif. Exp. for miRNA</a>
+        </div>
+
+
+        <div class="header">
+            <a href="{{ url_for('downloads', filename='circuits.txt') }}"> See Circuit </a>
+            
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
