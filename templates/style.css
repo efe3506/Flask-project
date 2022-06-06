@@ -112,8 +112,12 @@ a:hover{
 }
 
 
-.nd-1 a, .nd-2 a, .nd-3 a{
+.nd-1 a, .nd-2 a, .nd-3 a, .nd-4 a{
     color: #305973;
+}
+
+.nd-1 a, .nd-2 a, .nd-3 a{
+    width: 65% !important;
 }
 
 
