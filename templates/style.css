@@ -15,7 +15,6 @@ a:hover{
 
 .animated-background{
     width: 100%;
-    height: 100vh;
     background: linear-gradient(
         to right, #F0ECE3,
         #92A9BD, #7C99AC);
@@ -44,9 +43,49 @@ a:hover{
     border-radius: 4px;
 }
 
+@media screen and (max-width: 600px) {
+    .container, .container-fluid{
+    width: 85% !important;
+    }
+}
+
+/* example css */
+
+.example{
+    width: 30% !important;
+}
+
+.example-btn{
+    background-color: #537890;
+    outline: #537890 !important;
+    border-color: #537890 !important;
+    color: white;
+}
+
+.example-btn:hover{
+    background-color: #537890;
+    color: #F0ECE3;
+}
+
+.example-btn:active{
+    background-color: #537890 !important;
+    color: #333;
+}
+
+.card-body{
+    background-color: inherit !important;
+    border-color: #537890 !important;
+    border: none;
+}
+
+/* example css end*/
 
 
 /* select file */
+
+.with-label{
+    font-size: 16px;
+}
 
 .mrna, .mirna{
     padding: 1rem;
@@ -73,5 +112,18 @@ a:hover{
 }
 
 
+.nd-1 a, .nd-2 a, .nd-3 a{
+    color: #305973;
+}
+
 
 /* select file end */
+
+/* see/download css */
+
+.link-heading{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+}
+
+/* see/download css end */

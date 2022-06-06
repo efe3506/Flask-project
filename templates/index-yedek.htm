@@ -146,52 +146,34 @@
                 </div>
             </div>
 
-            <div class="row nd mb-5">
+            <div class="row nd">
 
                 <div class="col-md-12 inner-card my-2 p-2 d-grid text-center">
 
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h6 class="fw-bold link-heading">See</h6>
-                      <div class="nd-1 mt-3">
-                        <a href="{{ url_for('downloads', filename='Output/DE_mRNA.csv') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto">Differentially Expressed for mRNA</a>
-                      </div>
-                      <div class="nd-2">
-                        <a href="{{ url_for('downloads', filename='Output/DE_miRNA.csv') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Differentially Expressed for miRNA</a>
-                      </div>
-                      <div class="nd-3">
-                        <a href="{{ url_for('downloads', filename='Output/miRNA_TF_mRNA_1.txt') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Open Circuits miRNA-TF-mRNA-1</a>
-                      </div>
-                      <div class="nd-3">
-                        <a href="{{ url_for('downloads', filename='Output/miRNA_TF_mRNA_2.txt') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Open Circuits miRNA-TF-mRNA-2</a>
-                      </div>
-                      <div class="nd-3">
-                        <a href="{{ url_for('downloads', filename='Output/Circuits.txt') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-50 m-auto mt-1">Closed Circuits</a>
-                      </div>
+                    <div class="nd-1">
+                        <a href="{{ url_for('downloads', filename='out_1.csv') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-25 m-auto"> See TF File </a>
+
+                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-25 m-auto"> Dif. Exp. for TF </a>
                     </div>
+                    
+                    <div class="nd-2">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <a href="{{ url_for('downloads', filename='out_2.csv') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-25 m-auto"> See miRNA File </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="/download2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-25 m-auto"> Download Dif. Exp. for miRNA</a>
+                        </div>
+                      </div>
+                        
 
-
-                    <div class="col-md-6">
-                      <h6 class="fw-bold link-heading">Download</h6>
-                      <div class="nd-1 mt-3">
-                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto">Differentially_Expressed_for_mRNA.csv</a>
-                      </div>
-                      <div class="nd-2">
-                        <a href="/download2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Differentially_Expressed_for_miRNA.csv</a>
-                      </div>
-                      <div class="nd-3">
-                        <a href="/download2"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Open_Circuits_miRNA_TF_mRNA_1.txt</a>
-                      </div>
-                      <div class="nd-3">
-                        <a href="/download2"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Open_Circuits_miRNA_TF_mRNA_2.txt</a>
-                      </div>
-                      <div class="nd-3">
-                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-50 m-auto mt-1">Closed_Circuits.txt</a>
-                      </div>
-
+                        
                     </div>
-                  </div>
-
+                    
+                    <div class="nd-3">
+                        <a href="{{ url_for('downloads', filename='circuits.txt') }}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-25 m-auto"> See Circuit 
+                        </a>
+                    </div>
                     
 
 
