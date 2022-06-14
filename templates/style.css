@@ -72,6 +72,13 @@ a:hover{
     color: #333;
 }
 
+@media screen and (max-width: 1300px) {
+    .example-div a{
+        width: 80% !important;
+    }
+
+}
+
 .card-body{
     background-color: inherit !important;
     border-color: #537890 !important;
@@ -80,6 +87,11 @@ a:hover{
 
 /* example css end*/
 
+.qs-circle{
+    border: 1px solid #305973;
+    border-radius: 50%;
+    font-size: 15px;
+}
 
 /* select file */
 
@@ -116,8 +128,20 @@ a:hover{
     color: #305973;
 }
 
-.nd-1 a, .nd-2 a, .nd-3 a{
+.nd-1 a, .nd-2 a, .nd-3 a, .nd-4 a{
     width: 65% !important;
+}
+
+@media screen and (max-width: 1300px) {
+    .nd-1 a, .nd-2 a, .nd-3 a, .nd-4 a{
+        width: 80% !important;
+    }
+
+    .nd-1, .nd-2, .nd-3, .nd-4{
+        height: 50px !important;
+        border-bottom: 1px solid #a7a7a7;
+    }
+
 }
 
 

@@ -43,9 +43,21 @@
                     <div class="collapse" id="collapseExample">
                       <div class="card card-body">
                         <div class="example-div p-3 d-flex flex-column">
-                          <a href="{{ url_for('downloads', filename='Folder_mRNA.csv') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="example text-center m-auto my-1 p-1 text-dark"> Example mRNA File </a>
+                          <a href="{{ url_for('downloads', filename='Folder_mRNA.csv') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="example text-center m-auto my-1 p-1 text-dark d-block"> Example Raw Data Files </a>
+                          <div class="ex-raw">
+                           <div class="row">
+                            <div class="col-md-3">
+
+                            </div>
+                            <div class="col-md-3">
+                              
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3"></div>
+                           </div>
+                          </div>
             
-                          <a href="{{ url_for('downloads', filename='Folder_miRNA.csv') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="example text-center m-auto my-1 p-1 text-dark"> Example miRNA File </a>
+                          <a href="{{ url_for('downloads', filename='Folder_miRNA.csv') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Raw data file contains genes and expression values in group 1 and 2 (tumor and normal)" data-bs-trigger="hover focus" class="example text-center m-auto my-1 p-1 text-dark d-block"> Example miRNA File </a>
                       </div>
                       </div>
                     </div>
@@ -60,16 +72,22 @@
                 <div class="col-md-12 inner-card form-container">
                     <form method="POST" action="{{ url_for("upload_file")}}" enctype="multipart/form-data" class="container d-grid justify-content-center">
 
+
+                      <!--  Data With section -->
+
                       <div class="data">
                         <h6 class="text-center my-4 fw-bold">Data with...</h6>
                          <div class="d-flex">
                            <input class="form-check-input ms-3" type="radio"    name="raw-expression" id="raw" value=2>
-                           <label class="ms-2" for="raw">Raw data</label>
+                           <label class="ms-2" for="raw">Raw data</label> <label class="mx-1 px-2 qs-circle" for="" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Raw data file contains genes and expression values in group 1 and 2 (tumor and normal)" data-bs-trigger="hover focus"> &#x3f; </label>
                            <input class="form-check-input ms-5"   type="radio"    name="raw-expression"   id="expression" value=2>
-                           <label class="ms-2" for="expression">Expression values</label>
+                           <label class="ms-2" for="expression">Expression values</label> <label class="mx-1 px-2 qs-circle" for="" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Expression data contains diff. express genes and fold changes values" data-bs-trigger="hover focus"> &#x3f; </label>
                          </div>
                         
                       </div>
+
+
+                      <!-- Analysis method section -->
 
                       <div class="analysis">
                         <h6 class="text-center my-4 fw-bold">Analysis method...</h6>
@@ -94,6 +112,9 @@
                           </div>
                         </div>
                       </div>
+
+
+                      <!-- Select file section -->
 
                         <div class="select-file d-grid justify-content-center">
                           <h6 class="text-center mt-4 fw-bold">Select file...</h6>
@@ -174,19 +195,19 @@
                     <div class="col-md-6">
                       <h6 class="fw-bold link-heading">Download</h6>
                       <div class="nd-1 mt-3">
-                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto">Differentially_Expressed_for_mRNA.csv</a>
+                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto">DE_mRNA.csv</a>
                       </div>
                       <div class="nd-2">
-                        <a href="/download2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Differentially_Expressed_for_miRNA.csv</a>
+                        <a href="/download2" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> DE_miRNA.csv</a>
                       </div>
                       <div class="nd-3">
-                        <a href="/download2"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Open_Circuits_miRNA_TF_mRNA_1.txt</a>
+                        <a href="/download2"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> miRNA_TF_mRNA_1.txt</a>
                       </div>
                       <div class="nd-3">
-                        <a href="/download2"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> Open_Circuits_miRNA_TF_mRNA_2.txt</a>
+                        <a href="/download2"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-100 m-auto mt-1"> miRNA_TF_mRNA_2.txt</a>
                       </div>
                       <div class="nd-4">
-                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-50 m-auto mt-1">Closed_Circuits.txt</a>
+                        <a href="{{ url_for('download_file') }}"data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="this is a dummy text" data-bs-trigger="hover focus" class="w-50 m-auto mt-1">Closed_circuits.txt</a>
                       </div>
 
                     </div>
