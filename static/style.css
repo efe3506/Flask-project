@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0ECE3;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.animated-background{
+    width: 100%;
+    background: linear-gradient(
+        to right, #F0ECE3,
+        #92A9BD, #7C99AC);
+        background-size: 400% 400%;
+        animation: animated-background 1s infinite ease-in-out;
+}
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.inner-card{
+    background-color: 
+    rgba(255, 255, 255, .05);
+    box-shadow: 0 0 10px 
+    rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+    .container, .container-fluid{
+    width: 85% !important;
+    }
+}
+
+/* example css */
+
+.example{
+    width: 30% !important;
+}
+
+.example-btn{
+    background-color: #537890;
+    outline: #537890 !important;
+    border-color: #537890 !important;
+    color: white;
+}
+
+.example-btn:hover{
+    background-color: #537890;
+    color: #F0ECE3;
+}
+
+.example-btn:active{
+    background-color: #537890 !important;
+    color: #333;
+}
+
+@media screen and (max-width: 1300px) {
+    .example-div a{
+        width: 80% !important;
+    }
+
+}
+
+.card-body{
+    background-color: inherit !important;
+    border-color: #537890 !important;
+    border: none;
+}
+
+/* example css end*/
+
+.qs-circle{
+    border: 1px solid #305973;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.ornek-img{
+    width: 60%;
+
+}
+
+/* select file */
+
+.hidden{
+    display: none;
+}
+
+.with-label{
+    font-size: 16px;
+}
+
+.mrna, .mirna{
+    padding: 1rem;
+    font-weight: 600;
+}
+
+#mrna button, #mirna button{
+    border: none;
+    outline: none;
+    /* background-color: #92A9BD; */
+}
+
+.nd div{
+    margin: 8px 0;
+}
+
+.nd div a{
+    margin: 2px 0;
+}
+
+.nd-1, .nd-2, .nd-3{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nd-1 a, .nd-2 a, .nd-3 a, .nd-4 a{
+    color: #305973;
+}
+
+.nd-1 a, .nd-2 a, .nd-3 a, .nd-4 a{
+    width: 65% !important;
+}
+
+.nd-1 a, .nd-2 a, .nd-3 a, .nd-4 a{
+    border-bottom: 1px solid #a7a7a7;
+}
+
+@media screen and (max-width: 1300px) {
+    .nd-1 a, .nd-2 a, .nd-3 a, .nd-4 a{
+        width: 80% !important;
+    }
+
+    .nd-1, .nd-2, .nd-3, .nd-4{
+        height: 50px !important;
+        border-bottom: 1px solid #a7a7a7;
+    }
+
+}
+
+
+/* select file end */
+
+/* see/download css */
+
+.link-heading{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+}
+
+/* see/download css end */
+
+
+/* flow chart css */
+
+.flow-div{
+    width: 100% !important;
+    padding-bottom: 20px !important;
+}
+
+.flow-img{
+    width: 90%;
+}
+
+
+/* flow chart css end*/
+
+/* about css */
+
+.about-text{
+    text-align: justify !important;
+}
+
+.about-div{
+    height: 100vh;
+}
+
+/* about css end*/
+
+/* contact css */
+
+.contact-div{
+    height: 80vh;
+}
+
+.icerik{
+    height: 400px;
+}
+
+/* contact css end */
